@@ -7,7 +7,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY service/ ./service/
 COPY wsgi.py .
 
-RUN useradd --uid 1000 theia && chown -R theia /app
+RUN useradd --uid 1000 theia && mkdir -p /app/instance && chown -R theia /app
+# OpenShift runs containers as a random uid in group 0, so make /app group-writable
+RUN chgrp -R 0 /app && chmod -R g=u /app
 USER theia
 
 EXPOSE 8080

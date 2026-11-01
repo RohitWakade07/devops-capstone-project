@@ -1,0 +1,20 @@
+$ curl -i http://localhost:5000/
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     72 100     72   0      0    330      0                              0100     72 100     72   0      0    330      0                              0100     72 100     72   0      0    329      0                              0
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.11.9
+Date: Sun, 01 Nov 2026 17:10:16 GMT
+Content-Type: application/json
+Content-Length: 72
+Access-Control-Allow-Origin: *
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+Connection: close
+
+{"name":"Account REST API Service","paths":"/accounts","version":"1.0"}
+
+

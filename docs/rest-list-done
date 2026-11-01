@@ -1,0 +1,20 @@
+$ curl -i http://localhost:5000/accounts
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     58 100     58   0      0    264      0                              0100     58 100     58   0      0    263      0                              0100     58 100     58   0      0    263      0                              0
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.11.9
+Date: Sun, 01 Nov 2026 17:10:15 GMT
+Content-Type: application/json
+Content-Length: 58
+Access-Control-Allow-Origin: *
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+Connection: close
+
+[{"address":"NY","email":"j@x.com","id":1,"name":"John"}]
+
+

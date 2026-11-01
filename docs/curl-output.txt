@@ -1,0 +1,119 @@
+$ curl -i -X POST http://localhost:5000/accounts -H Content-Type: application/json -d {"name":"John","email":"j@x.com","address":"NY"}
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    104 100     56 100     48    233    200                              0100    104 100     56 100     48    231    198                              0100    104 100     56 100     48    230    197                              0
+HTTP/1.1 201 CREATED
+Server: Werkzeug/3.1.9 Python/3.11.9
+Date: Sun, 01 Nov 2026 17:10:14 GMT
+Content-Type: application/json
+Content-Length: 56
+Location: /accounts/1
+Access-Control-Allow-Origin: *
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+Connection: close
+
+{"address":"NY","email":"j@x.com","id":1,"name":"John"}
+
+
+$ curl -i http://localhost:5000/accounts
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     58 100     58   0      0    264      0                              0100     58 100     58   0      0    263      0                              0100     58 100     58   0      0    263      0                              0
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.11.9
+Date: Sun, 01 Nov 2026 17:10:15 GMT
+Content-Type: application/json
+Content-Length: 58
+Access-Control-Allow-Origin: *
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+Connection: close
+
+[{"address":"NY","email":"j@x.com","id":1,"name":"John"}]
+
+
+$ curl -i http://localhost:5000/accounts/1
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     56 100     56   0      0    263      0                              0100     56 100     56   0      0    263      0                              0100     56 100     56   0      0    262      0                              0
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.11.9
+Date: Sun, 01 Nov 2026 17:10:15 GMT
+Content-Type: application/json
+Content-Length: 56
+Access-Control-Allow-Origin: *
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+Connection: close
+
+{"address":"NY","email":"j@x.com","id":1,"name":"John"}
+
+
+$ curl -i -X PUT http://localhost:5000/accounts/1 -H Content-Type: application/json -d {"name":"John R","email":"j@x.com","address":"NY"}
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    108 100     58 100     50    260    224                              0100    108 100     58 100     50    260    224                              0100    108 100     58 100     50    259    224                              0
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.11.9
+Date: Sun, 01 Nov 2026 17:10:15 GMT
+Content-Type: application/json
+Content-Length: 58
+Access-Control-Allow-Origin: *
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+Connection: close
+
+{"address":"NY","email":"j@x.com","id":1,"name":"John R"}
+
+
+$ curl -i -X DELETE http://localhost:5000/accounts/1
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0  0      0   0      0   0      0      0      0                              0  0      0   0      0   0      0      0      0                              0  0      0   0      0   0      0      0      0                              0
+HTTP/1.1 204 NO CONTENT
+Server: Werkzeug/3.1.9 Python/3.11.9
+Date: Sun, 01 Nov 2026 17:10:16 GMT
+Content-Type: text/html; charset=utf-8
+Access-Control-Allow-Origin: *
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+Connection: close
+
+
+
+$ curl -i http://localhost:5000/
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     72 100     72   0      0    330      0                              0100     72 100     72   0      0    330      0                              0100     72 100     72   0      0    329      0                              0
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.11.9
+Date: Sun, 01 Nov 2026 17:10:16 GMT
+Content-Type: application/json
+Content-Length: 72
+Access-Control-Allow-Origin: *
+Permissions-Policy: browsing-topics=()
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+Connection: close
+
+{"name":"Account REST API Service","paths":"/accounts","version":"1.0"}
+
+

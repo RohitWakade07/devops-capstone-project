@@ -1,6 +1,6 @@
-# Accounts Service
+# DevOps Capstone Project - Accounts Service
 
-![Build Status](https://github.com/RohitWakade07/accounts-service/actions/workflows/ci-build.yaml/badge.svg)
+![Build Status](https://github.com/RohitWakade07/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)
 
 Flask REST API for managing customer accounts (create, read, list, update, delete), with Talisman security headers and CORS.
 

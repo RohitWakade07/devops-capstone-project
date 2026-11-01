@@ -1,15 +1,17 @@
-test_cors_header (tests.test_routes.TestAccountService.test_cors_header) ... ok
-test_create_account (tests.test_routes.TestAccountService.test_create_account) ... ok
-test_create_bad_data (tests.test_routes.TestAccountService.test_create_bad_data) ... ok
-test_delete_account (tests.test_routes.TestAccountService.test_delete_account) ... ok
-test_index (tests.test_routes.TestAccountService.test_index) ... ok
-test_list_accounts (tests.test_routes.TestAccountService.test_list_accounts) ... ok
-test_model_repr (tests.test_routes.TestAccountService.test_model_repr) ... ok
-test_read_account (tests.test_routes.TestAccountService.test_read_account) ... ok
-test_read_not_found (tests.test_routes.TestAccountService.test_read_not_found) ... ok
-test_security_headers (tests.test_routes.TestAccountService.test_security_headers) ... ok
-test_update_account (tests.test_routes.TestAccountService.test_update_account) ... ok
-test_update_not_found_and_bad (tests.test_routes.TestAccountService.test_update_not_found_and_bad) ... ok
+
+Account service tests
+- It should return a CORS header
+- It should Create a new Account
+- It should not Create an Account when sending the wrong data
+- It should Delete an Account
+- It should get 200_OK from the Home Page
+- It should Get a list of Accounts
+- It should represent an Account as a string
+- It should Read a single Account
+- It should not Read an Account that is not found
+- It should return security headers
+- It should Update an existing Account
+- It should not Update a missing or invalid Account
 
 Name                  Stmts   Miss  Cover   Missing
 ---------------------------------------------------
@@ -19,6 +21,7 @@ service\routes.py        51      0   100%
 ---------------------------------------------------
 TOTAL                   100      0   100%
 ----------------------------------------
-Ran 12 tests in 0.118s
+Ran 12 tests in 0.139s
 
 OK
+
